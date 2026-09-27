@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CQ</title>
+
+  <!-- Google Fonts: Caveat for the handwritten headlines, Quicksand for everything else -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+
+
+  <main class="stage">
+
+    <!-- ===================== SCREEN 1: LANDING ===================== -->
+    
+
+    <section class="screen screen--landing" id="screen-landing">
+      <div class="card card--landing">
+        <p class="eyebrow-doodle">Hot takes & Unpopular Opinions</p>
+        <h1 class="title-handwritten">CONTROVERSIAL QUESTIONS</h1>
+        <p class="subtitle">answer series of multiple choice questions </p>
+        <button class="btn btn--primary" id="btn-begin" type="button">
+          Begin
+        </button>
+      </div>
+    </section>
+
+    <!-- ===================== SCREEN 2: QUESTIONNAIRE ===================== -->
+    <section class="screen screen--quiz" id="screen-quiz" hidden>
+      <div class="card card--quiz">
+
+        <!-- Progress bar fills as the person moves through their path -->
+        <div class="progress-track" aria-hidden="true">
+          <div class="progress-fill" id="progress-fill"></div>
+        </div>
+
+        <p class="question-number" id="question-number"></p>
+        <h2 class="question-text" id="question-text">Question goes here</h2>
+
+        <!-- Answer option cards get injected here by script.js -->
+        <div class="options" id="options-container"></div>
+
+        <button class="btn btn--primary btn--next" id="btn-next" type="button" disabled>
+          Next 
+        </button>
+      </div>
+    </section>
+
+    <!-- ===================== SCREEN 3: THANK YOU ===================== -->
+    <section class="screen screen--end" id="screen-end" hidden>
+      <div class="card card--landing">
+        <h1 class="title-handwritten">that's all</h1>
+        <p class="eyebrow-doodle" id="end-message">
+          answers were recorded btw
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="questions.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
